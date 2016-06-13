@@ -99,12 +99,10 @@
 	
 	.image-index
 	{
+	 	 display: block;
 		 max-width:275px;
 		 height: auto;
 		 border: 3px solid #800000
-		 position: absolute;
-		 top: 0; right: 0; bottom: 0; left: 0;
-		 margin: auto;
 	}
 
 /*********************************************************************************/
