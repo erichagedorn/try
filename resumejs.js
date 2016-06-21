@@ -1,15 +1,13 @@
-$('p select[name=Browser]').change(function(e){
-  if ($('p select[name=Browser]').val() == '5'){
-    $('#browserother').show();
-  }else{
-    $('#browserother').hide();
-  }
-});
+<script type="text/javascript" language="JavaScript"><!--
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//--></script>
 
-$('p select[name=OS]').change(function(){
-  if ($('p select[name=OS]').val() == 'otheros'){
-    $('#osother').show();
-  }else{
-    $('#osother').hide();
-  }
-});
