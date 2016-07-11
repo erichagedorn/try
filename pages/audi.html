@@ -7,6 +7,7 @@
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -39,8 +40,89 @@ $(document).ready(function() {
 });
 </script>
 
-
 /////////////////////////////////////PIC SCRIPT END//////////////////////////////
+
+
+
+
+/////////////////////////////////////SLIDER SCRIPT START//////////////////////////////
+//This array should come from the server, or any other way to get a list of images
+var gallery=["audipics/enginein.jpg","audipics/comingout.JPG","audipics/out2.JPG","audipics/separated.JPG","audipics/noIM.JPG","audipics/timingchains.JPG","audipics/brokenguide.JPG"];
+var total_in_gallery=gallery.length - 1;
+
+//Represents the position in the array
+var gallery_nbr=0;
+
+// when the DOM is ready
+$(function() {
+  
+  //Load the first image of the gallery
+  $("#image").load(function() {
+    $(this).hide();
+    $(this).fadeIn();
+  }).attr('src',gallery[gallery_nbr]);
+  
+  //Defines what is happening when clicking on the previous button
+  $("#previous").click(displayPrevious);
+  
+  //Defines what is happening when clicking on the next button        
+  $("#next").click(displayNext);
+  
+  //Slides up the controls when the mouse is over the #logo div
+  //Slides down the controls when the mouse is outside the #logo div
+  $("#logo").hover(function() {
+    $("#controls").animate({
+        bottom: "0px"
+    }, 500 );
+  },
+  function() {
+    $("#controls").animate({
+        bottom: "-30px"
+    }, 500 );
+  });
+  
+});
+
+//Load the image 
+function loadImage(image) {
+  $("#image").fadeOut('slow', function(){
+    $("#image").load(function() {
+      $(this).hide();
+      $(this).fadeIn();
+    }).attr('src',image);
+  });
+}
+
+//To calculate the index in the gallery for the previous image
+function previousImage() {
+  gallery_nbr--;
+  if(gallery_nbr < 0)
+    gallery_nbr=total_in_gallery;
+}
+
+//To calculate the index in the gallery for the next image
+function nextImage() {
+  gallery_nbr++;
+  if(gallery_nbr > total_in_gallery)
+    gallery_nbr=0;
+};
+
+//Display next image
+function displayNext(){
+  nextImage();
+  loadImage(gallery[gallery_nbr]);
+}
+
+//Display previous image
+function displayPrevious(){
+  previousImage();
+  loadImage(gallery[gallery_nbr]);
+}
+
+
+
+/////////////////////////////////////SLIDER SCRIPT START//////////////////////////////
+
 
 
 
@@ -69,6 +151,23 @@ $(document).ready(function() {
 		</div>
 	</div>
 	
+////////////////////////////slider ////////////////
+ <div id="slider">
+      <div id="pictures">
+        <!-- This is the loading image -->
+        <img id="spinner" src="images/spinner.gif">
+        <img id="image" src=""/>
+      </div>
+      <div id="logo">
+        <div id="controls">
+          <ul>
+            <li class="first"><a href="#" id="previous">Previous</a></li>
+            <li><a href="#" id="next">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+////////////////////////////slider ////////////////
 	
 <img id="enginein" class="center fit" src="audipics/enginein.jpg" >    
 
