@@ -9,7 +9,7 @@
 #pictures{
   float: left;
   height: 200px;
-  width: 453px;
+  max-width: 453px;
   position: relative;
   background-color: white;
 }
