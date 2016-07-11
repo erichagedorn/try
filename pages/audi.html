@@ -23,6 +23,39 @@ else { document.getElementById(d).style.display = "none"; }
 }
 //--></script>
 
+/////////////////////////////////////PIC SCRIPT//////////////////////////////
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+.fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+function set_body_height()
+{
+    var wh = $(window).height();
+    $('body').attr('style', 'height:' + wh + 'px;');
+}
+$(document).ready(function() {
+    set_body_height();
+    $(window).bind('resize', function() { set_body_height(); });
+});
+</script>
+
+
+/////////////////////////////////////PIC SCRIPT END//////////////////////////////
+
+
 </head>
 <body>
 <div id="header">
@@ -45,7 +78,9 @@ else { document.getElementById(d).style.display = "none"; }
 				<p>In 2015 I needed to replace a timing chain tensioner. Unfortunately that required an engine pull.</p>
 		</div>
 	</div>
-
+	
+	
+<img id="enginein" class="center fit" src="audipics/enginein.JPG" >    
 
 <div id="copyright" class="container">
 	<p>&copy; Eric Hagedorn. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a> | Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a></p></div>
