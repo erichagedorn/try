@@ -1,0 +1,58 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<script type="text/javascript" language="JavaScript"><!--
+function HideContent(d) {
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+document.getElementById(d).style.display = "block";
+}
+function ReverseDisplay(d) {
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//--></script>
+
+</head>
+<body>
+<div id="header">
+	<div id="menu" class="container">
+		<ul>
+			<li><a href="../index.html" accesskey="1" title="">Home</a></li>
+			<li><a href="aboutme.html" accesskey="1" title="">About Me</a></li>
+			<li><a href="resume.html" accesskey="2" title="">Resume</a></li>
+			<li><a href="hobbies.html" accesskey="4" title="">Hobbies</a></li>
+			<li><a href="contact.html" accesskey="5" title="">Contact</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="featured-wrapper">
+	<div id="featured" class="container">
+		<div class="major">
+			<h3>In my rare spare time:</h3>
+				<a href="javascript:ReverseDisplay('AUDIS4')")>2005 Audi S4</a><br/>
+					<div id="AUDIS4" style="display:none;">
+					<p>My daily driver, project car, and money pit with which I enjoy a love/hate relationship.</br>
+					The car is a sterotpyical german-engineered 4.2L V8 that is somehow stuffed into a tiny engine bay.</br>
+					To date, my largest endeavor was when I pulled the motor out by myself to update the timing components which are (in)conveniently located on the rear of the engine... </p>
+					</div>
+		</div>
+	</div>
+
+
+<div id="copyright" class="container">
+	<p>&copy; Eric Hagedorn. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a> | Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a></p></div>
+</body>
+</html>
