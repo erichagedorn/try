@@ -1,0 +1,77 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+    
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+.fit {
+  max-width: 50%;
+  max-height: 50%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" language="JavaScript">
+function set_body_height()
+{
+    var wh = $(window).height();
+    $('body').attr('style', 'height:' + wh + 'px;');
+}
+$(document).ready(function() {
+    set_body_height();
+    $(window).bind('resize', function() { set_body_height(); });
+});
+</script>
+
+
+
+
+</head>
+<body>
+<div id="header">
+	<div id="menu" class="container">
+		<ul>
+			<li><a href="../index.html" accesskey="1" title="">Home</a></li>
+			<li><a href="aboutme.html" accesskey="1" title="">About Me</a></li>
+			<li><a href="resume.html" accesskey="2" title="">Resume</a></li>
+			<li><a href="hobbies.html" accesskey="4" title="">Hobbies</a></li>
+			<li><a href="contact.html" accesskey="5" title="">Contact</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="featured-wrapper">
+		<div id="featured" class="container">
+		<div class="major">
+			<h3>New Project! Mustang-slaying grocery getter for my wife! </h3>
+				<p>I'm jealous of my wife now. I bought her the avant (wagon) version of my car, and I think I like it more than mine! Needs a little TLC but nothing I can't handle!</p>
+		</div>
+	</div>
+
+<img id="audi_a1" class="center fit" src="audipics/audi_a1.jpg" >    </br>
+
+
+
+
+<div id="copyright" class="container">
+	<p>&copy; Eric Hagedorn. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a> | Hosted on <a href="https://github.com/" rel="nofollow">GitHub</a></p></div>
+</body>
+</html>
